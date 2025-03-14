@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    height: 120px;
+    background-color: #93AC19;
+    color: white; 
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+    .logo {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 65px;
+
+        p {
+            margin-left: 30px;
+            color: #5A7008;
+        }
+        
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 219px;
+        margin-right: 91px;
+        font-weight: 400;
+        font-size: 54px;
+        cursor: pointer;
+
+        @media (max-width: 1350px) {
+            gap: 100px;
+            margin-left: 50px;
+        }
+    }
+
+    .homeLink {
+        text-decoration: none; 
+        color: inherit;
+    
+        &:hover {
+            color: black;
+        }
+    }
+}
