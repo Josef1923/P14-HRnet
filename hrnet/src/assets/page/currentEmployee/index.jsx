@@ -2,11 +2,13 @@ import React from 'react';
 import Header from '@/header';
 import Footer from '@/footer';
 
-function Current () {
+function Current() {
     return (
         <div className='principal'>
             <Header />
-            <div className='content'></div>
+            <div className='content'>
+                <h1>Current Employees</h1>
+            </div>
             <Footer />
         </div>
     )

@@ -30,7 +30,7 @@
         gap: 219px;
         margin-right: 91px;
         font-weight: 400;
-        font-size: 40px;
+        font-size: 30px;
         cursor: pointer;
 
         @media (max-width: 1350px) {
@@ -39,12 +39,12 @@
         }
     }
 
-    .homeLink {
+    .link {
         text-decoration: none; 
         color: inherit;
     
         &:hover {
-            color: black;
+            color: #5A7008;
         }
     }
 }

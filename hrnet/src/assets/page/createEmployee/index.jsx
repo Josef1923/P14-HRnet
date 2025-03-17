@@ -7,7 +7,12 @@ function Create () {
     return (
         <div className='principal'>
             <Header />
-            <div className='content'></div>
+            <div className='content'>
+                <h1>Create Employee</h1>
+                <div className='leftSide'>
+
+                </div>
+            </div>
             <Footer />
         </div>
     )
