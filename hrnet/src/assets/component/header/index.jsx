@@ -3,16 +3,16 @@ import logo from "../../logo/HRnet.png";
 import "./styles.scss";
 
 
-function Header () {
+function Header() {
     return (
         <header className="header">
             <div className="logo">
-                <img src={logo} alt="Logo HRnet"/>
+                <img src={logo} alt="Logo HRnet" />
                 <p>WEALTH HEALTH</p>
             </div>
             <nav>
                 <ul>
-                <li><Link to="/" className="homeLink">Home</Link></li>
+                    <li><Link to="/" className="homeLink">Home</Link></li>
                 </ul>
             </nav>
         </header>
