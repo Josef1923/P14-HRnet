@@ -1,3 +1,64 @@
 .h1 {
     text-align: center;
 }
+
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 80px;
+
+    .leftSide {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+
+        label {
+            margin-top: 20px;
+        }
+
+        input {
+            height: 20px;
+        }
+    }
+
+    .rightSide {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+
+        label {
+            margin-top: 20px;
+        }
+
+        input {
+            height: 20px;
+        }
+
+        .address {
+            display: flex;
+            flex-direction: column;
+        }
+    }    
+}
+
+.formButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+    button {
+        width: 150px;
+        height: 40px;        
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #93AC19;
+        color: white;
+        border: none;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #5A7008;
+        }
+    }
+}
