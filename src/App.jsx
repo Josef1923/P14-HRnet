@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Create from './assets/page/createEmployee'
-import Current from './assets/page/currentEmployee'
+import Create from './page/createEmployee'
+import Current from './page/currentEmployee'
 import './App.scss'
 
 function App() {
