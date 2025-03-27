@@ -17,8 +17,12 @@
             margin-top: 20px;
         }
 
-        input {
+        input,
+        .react-datepicker-wrapper input {
             height: 20px;
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
         }
     }
 
@@ -62,3 +66,7 @@
         }
     }
 }
+
+.react-datepicker__close-icon::after {
+    background-color: #93AC19 ;
+  }

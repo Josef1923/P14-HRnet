@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Header from '@/header';
 import Footer from '@/footer';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import './styles.scss';
 
 function Create() {
@@ -30,11 +32,15 @@ function Create() {
                             <input type='text' id='lastName' name='lastName'
                                 value={lastName} onChange={(e) => setLastName(e.target.value)} />
                             <label htmlFor='dateOfBirth'>Date of Birth</label>
-                            <input type='date' id='dateOfBirth' name='dateOfBirth'
-                                value={dateOfBirth} onChange={(e) => setDateOfBirth(e.target.value)} />
+                            <DatePicker selected={dateOfBirth} onChange={(date) => setDateOfBirth(date)}
+                                dateFormat="dd-MM-yyyy"
+                                isClearable
+                                todayButton="Aujourd'hui" />
                             <label htmlFor='startDate'>Start Date</label>
-                            <input type='date' id='startDate' name='startDate'
-                                value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+                            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)}
+                                dateFormat="dd-MM-yyyy"
+                                isClearable
+                                todayButton="Aujourd'hui" />
                         </div>
                         <div className='rightSide'>
                             <fieldset className='address'>
