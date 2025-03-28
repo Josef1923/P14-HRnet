@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
-    "josef1923-dropdown-react": "^0.0.2",
+    "josef1923-dropdown-react": "^0.0.7",
     "react": "^19.0.0",
     "react-datepicker": "^8.2.1",
     "react-dom": "^19.0.0",
