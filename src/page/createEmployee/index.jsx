@@ -3,7 +3,17 @@ import Header from '@/header';
 import Footer from '@/footer';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import Dropdown from "josef1923-dropdown-react"
+import "josef1923-dropdown-react/src/Dropdown.css"
+import { states } from "../../datas/states";
+import { departments } from "../../datas/departments";
 import './styles.scss';
+
+const stateOptions = states.map((state) => ({
+    label: state.name,
+    value: state.abbreviation
+}))
+
 
 function Create() {
 
@@ -13,7 +23,7 @@ function Create() {
     const [startDate, setStartDate] = useState('');
     const [street, setStreet] = useState('');
     const [city, setCity] = useState('');
-    const [state, setState] = useState('');
+    const [selectedState, setSelectedState] = useState('');
     const [zipCode, setZipCode] = useState('');
     const [department, setDepartment] = useState('');
 
@@ -22,7 +32,9 @@ function Create() {
             <Header />
             <div className='content'>
                 <h1>Create Employee</h1>
-                <form >
+                <form onSubmit={(e) => {
+                    e.preventDefault()
+                }} >
                     <div className='form'>
                         <div className='leftSide'>
                             <label htmlFor='firstName'>First Name</label>
@@ -52,19 +64,17 @@ function Create() {
                                 <input type='text' id='city' name='city'
                                     value={city} onChange={(e) => setCity(e.target.value)} />
                                 <label htmlFor='state'>State</label>
-                                <select id='state' name='state'
-                                    value={state} onChange={(e) => setState(e.target.value)}  >
-                                    <option value=''>PLug in a faire</option>
-                                </select>
+                                <Dropdown
+                                    options={stateOptions}
+                                    onChange={(val) => setSelectedState(val)} />
                                 <label htmlFor='zipCode'>Zip Code</label>
                                 <input type='number' id='zipCode' name='zipCode'
                                     value={zipCode} onChange={(e) => setZipCode(e.target.value)} />
                             </fieldset>
                             <label htmlFor='department'>Department</label>
-                            <select id='department' name='department'
-                                value={department} onChange={(e) => setDepartment(e.target.value)} >
-                                <option value=''>PLugin a venir</option>
-                            </select>
+                            <Dropdown
+                                options={departments}
+                                onChange={(val) => setDepartment(val)} />
                         </div>
                     </div>
                     <div className='formButton'>
