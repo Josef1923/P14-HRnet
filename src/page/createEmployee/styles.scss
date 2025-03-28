@@ -73,11 +73,24 @@
 }
 
 .react-datepicker__close-icon::after {
+    position: absolute;
     background-color: #93AC19;
+    width: 12px;
+    height: 12px;
+    top: 15px;
+    right: 0;
 }
 
 .jsDropdown {
-    margin-top: 5px;
-    background: white;
+    margin-top: 5px;    
     width: 100%;
+}
+
+.jsDropdownButton {
+    background-color: white
+}
+
+.jsDropdownList {
+    font-size: 15px;
+    font-weight: 100;
 }

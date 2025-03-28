@@ -7,25 +7,27 @@ import Dropdown from "josef1923-dropdown-react"
 import "josef1923-dropdown-react/src/Dropdown.css"
 import { states } from "../../datas/states";
 import { departments } from "../../datas/departments";
+import icon from "../../assets/icon/icon.svg";
 import './styles.scss';
-
-const stateOptions = states.map((state) => ({
-    label: state.name,
-    value: state.abbreviation
-}))
 
 
 function Create() {
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [dateOfBirth, setDateOfBirth] = useState('');
-    const [startDate, setStartDate] = useState('');
+    const [dateOfBirth, setDateOfBirth] = useState(null);
+    const [startDate, setStartDate] = useState(null);
     const [street, setStreet] = useState('');
     const [city, setCity] = useState('');
     const [selectedState, setSelectedState] = useState('');
     const [zipCode, setZipCode] = useState('');
     const [department, setDepartment] = useState('');
+
+    const stateOptions = states.map((state) => ({
+        label: state.name,
+        value: state.abbreviation
+    }))
+
 
     return (
         <div className='principal'>
@@ -66,7 +68,9 @@ function Create() {
                                 <label htmlFor='state'>State</label>
                                 <Dropdown
                                     options={stateOptions}
-                                    onChange={(val) => setSelectedState(val)} />
+                                    onChange={(val) => setSelectedState(val)}
+                                    icon={<img src={icon} alt="Dropdown Icon" />}
+                                />
                                 <label htmlFor='zipCode'>Zip Code</label>
                                 <input type='number' id='zipCode' name='zipCode'
                                     value={zipCode} onChange={(e) => setZipCode(e.target.value)} />
@@ -74,7 +78,9 @@ function Create() {
                             <label htmlFor='department'>Department</label>
                             <Dropdown
                                 options={departments}
-                                onChange={(val) => setDepartment(val)} />
+                                onChange={(val) => setDepartment(val)}
+                                icon={<img src={icon} alt="Dropdown Icon" />}
+                            />
                         </div>
                     </div>
                     <div className='formButton'>
