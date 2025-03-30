@@ -3,184 +3,12 @@ import Header from '@/header';
 import Footer from '@/footer';
 import DataTable from 'react-data-table-component';
 import colonnes from '@/employeesTable/columns.js';
+import { useSelector } from 'react-redux';
 import './styles.scss';
 
-
-const donnees = [
-    {
-        id: 1,
-        firstName: 'Alice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    },
-    {
-        id: 2,
-        firstName: 'bdlice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    }, {
-        id: 3,
-        firstName: 'dlddice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    }, {
-        id: 4,
-        firstName: 'efflice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    }, {
-        id: 5,
-        firstName: 'clicfzae',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    },
-    {
-        id: 1,
-        firstName: 'Alice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    },
-    {
-        id: 2,
-        firstName: 'bdlice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    }, {
-        id: 3,
-        firstName: 'dlddice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    }, {
-        id: 4,
-        firstName: 'efflice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    }, {
-        id: 5,
-        firstName: 'clicfzae',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    },
-    {
-        id: 1,
-        firstName: 'Alice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    },
-    {
-        id: 2,
-        firstName: 'bdlice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    }, {
-        id: 3,
-        firstName: 'dlddice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    }, {
-        id: 4,
-        firstName: 'efflice',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    }, {
-        id: 5,
-        firstName: 'clicfzae',
-        lastName: 'Dupont',
-        startDate: '2022-01-01',
-        department: 'Ingénierie',
-        dateOfBirth: '1990-05-15',
-        street: '123 Rue Principale',
-        city: 'Paris',
-        state: 'Île-de-France',
-        zipCode: '75001',
-    },
-];
-
 function Current() {
+
+    const employees = useSelector((state) => state.employee.employees);
 
     return (
         <div className='principal'>
@@ -191,7 +19,7 @@ function Current() {
                 <div className='dataTable'>
                     <DataTable
                         columns={colonnes}
-                        data={donnees}
+                        data={employees}
                         pagination
                         highlightOnHover
                     />

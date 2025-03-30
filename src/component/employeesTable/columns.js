@@ -36,7 +36,7 @@ const colonnes = [
     },
     {
         name: 'State',
-        selector: row => row.state,
+        selector: row => row.selectedState,
         sortable: true,
     },
     {
