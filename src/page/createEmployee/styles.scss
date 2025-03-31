@@ -94,3 +94,37 @@
     font-size: 15px;
     font-weight: 100;
 }
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+  .modal {
+    background: white;
+    padding: 30px;;
+    width: 20%;
+    margin: 20% auto;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: #93AC19;
+    width: 80%;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+  }
+}

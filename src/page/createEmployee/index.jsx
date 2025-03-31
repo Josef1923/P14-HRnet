@@ -11,8 +11,10 @@ import icon from "../../assets/icon/icon.svg";
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '../../redux/slice';
 import { useNavigate } from 'react-router-dom';
+import Modal from 'react-modal';
 import './styles.scss';
 
+Modal.setAppElement('#root');
 
 function Create() {
 
@@ -28,6 +30,8 @@ function Create() {
     const [selectedState, setSelectedState] = useState('');
     const [zipCode, setZipCode] = useState('');
     const [department, setDepartment] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
 
     const stateOptions = states.map((state) => ({
         label: state.name,
@@ -49,7 +53,7 @@ function Create() {
         };
 
         dispatch(addEmployee(newEmployee));
-        navigate('/employees')
+        setIsModalOpen(true);
     }
 
     return (
@@ -78,7 +82,7 @@ function Create() {
                             isClearable
                             showYearDropdown
                             scrollableYearDropdown
-                            yearDropdownItemNumber={20} 
+                            yearDropdownItemNumber={20}
                             todayButton="Aujourd'hui" />
                     </div>
                     <div className='rightSide'>
@@ -111,6 +115,15 @@ function Create() {
                 <div className='formButton'>
                     <button type="button" onClick={handleSubmit}>Save</button>
                 </div>
+                <Modal
+                    isOpen={isModalOpen}
+                    onRequestClose={() => setIsModalOpen(false)}
+                    contentLabel="Confirmation"
+                    className="modal"
+                    overlayClassName="modal-overlay">
+                    <p>Employee Created!</p>
+                    <button onClick={() => setIsModalOpen(false)}>Close</button>
+                </Modal>
             </div>
             <Footer />
         </div>
