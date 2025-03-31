@@ -39,13 +39,26 @@ function Create() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-       
+        if (
+            !firstName ||
+            !lastName ||
+            !dateOfBirth ||
+            !startDate ||
+            !street ||
+            !city ||
+            !selectedState ||
+            !zipCode ||
+            !department
+          ) {
+            alert('Please fill in all fields.');
+            return;
+          }
 
         const newEmployee = {
             firstName,
             lastName,
             dateOfBirth: dateOfBirth?.toLocaleDateString('fr-FR') || '',
-            startDate: startDate?.toLocaleDateString('fr-FR') || '',
+            startDate: dateOfBirth?.toLocaleDateString('fr-FR') || '',
             street,
             city,
             selectedState,
