@@ -10,7 +10,6 @@ import { departments } from "../../datas/departments";
 import icon from "../../assets/icon/icon.svg";
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '../../redux/slice';
-import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
 import './styles.scss';
 
@@ -19,7 +18,6 @@ Modal.setAppElement('#root');
 function Create() {
 
     const dispatch = useDispatch();
-    const navigate = useNavigate()
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -40,6 +38,22 @@ function Create() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        if (
+            !firstName ||
+            !lastName ||
+            !dateOfBirth ||
+            !startDate ||
+            !street ||
+            !city ||
+            !selectedState ||
+            !zipCode ||
+            !department
+          ) {
+            alert('Please fill in all fields.');
+            return;
+          }
+
         const newEmployee = {
             firstName,
             lastName,
