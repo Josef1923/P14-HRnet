@@ -69,11 +69,16 @@ function Create() {
                         <DatePicker selected={dateOfBirth} onChange={(date) => setDateOfBirth(date)}
                             dateFormat="dd-MM-yyyy"
                             isClearable
-                            todayButton="Aujourd'hui" />
+                            showYearDropdown
+                            scrollableYearDropdown
+                            yearDropdownItemNumber={100} />
                         <label htmlFor='startDate'>Start Date</label>
                         <DatePicker selected={startDate} onChange={(date) => setStartDate(date)}
                             dateFormat="dd-MM-yyyy"
                             isClearable
+                            showYearDropdown
+                            scrollableYearDropdown
+                            yearDropdownItemNumber={20} 
                             todayButton="Aujourd'hui" />
                     </div>
                     <div className='rightSide'>
