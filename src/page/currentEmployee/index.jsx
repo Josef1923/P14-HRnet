@@ -9,6 +9,7 @@ import './styles.scss';
 function Current() {
 
     const employees = useSelector((state) => state.employee.employees);
+    console.log(employees);
 
     return (
         <div className='principal'>
@@ -22,6 +23,7 @@ function Current() {
                         data={employees}
                         pagination
                         highlightOnHover
+                        responsive
                     />
                 </div>
             </div>

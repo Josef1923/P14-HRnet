@@ -1,0 +1,135 @@
+[
+    {
+      "firstName": "Naruto",
+      "lastName": "Uzumaki",
+      "dateOfBirth": "1999-10-10",
+      "startDate": "2020-01-01",
+      "street": "Konoha",
+      "city": "Konoha",
+      "selectedState": "AL",
+      "zipCode": "48345",
+      "department": "Sales"
+    },
+    {
+      "firstName": "Monkey D.",
+      "lastName": "Luffy",
+      "dateOfBirth": "1997-05-05",
+      "startDate": "2019-03-15",
+      "street": "Going Merry",
+      "city": "East Blue",
+      "selectedState": "TX",
+      "zipCode": "75001",
+      "department": "Engineering"
+    },
+    {
+      "firstName": "Sakura",
+      "lastName": "Haruno",
+      "dateOfBirth": "1999-03-28",
+      "startDate": "2021-06-10",
+      "street": "Medical Street",
+      "city": "Konoha",
+      "selectedState": "CA",
+      "zipCode": "90210",
+      "department": "Human Resources"
+    },
+    {
+      "firstName": "Sasuke",
+      "lastName": "Uchiha",
+      "dateOfBirth": "1999-07-23",
+      "startDate": "2018-09-01",
+      "street": "Uchiha District",
+      "city": "Konoha",
+      "selectedState": "NY",
+      "zipCode": "10001",
+      "department": "Legal"
+    },
+    {
+      "firstName": "Roronoa",
+      "lastName": "Zoro",
+      "dateOfBirth": "1995-11-11",
+      "startDate": "2017-04-22",
+      "street": "Sword Way",
+      "city": "Shimotsuki",
+      "selectedState": "FL",
+      "zipCode": "33101",
+      "department": "Security"
+    },
+    {
+      "firstName": "Nami",
+      "lastName": "Belmer",
+      "dateOfBirth": "1998-07-03",
+      "startDate": "2021-01-10",
+      "street": "Weather Blvd",
+      "city": "Cocoyasi",
+      "selectedState": "WA",
+      "zipCode": "98001",
+      "department": "Finance"
+    },
+    {
+      "firstName": "Goku",
+      "lastName": "Son",
+      "dateOfBirth": "1989-04-16",
+      "startDate": "2015-02-01",
+      "street": "Mount Paozu",
+      "city": "West City",
+      "selectedState": "CO",
+      "zipCode": "80014",
+      "department": "Training"
+    },
+    {
+      "firstName": "Vegeta",
+      "lastName": "Royal",
+      "dateOfBirth": "1984-08-14",
+      "startDate": "2016-07-18",
+      "street": "Capsule Corp",
+      "city": "West City",
+      "selectedState": "NV",
+      "zipCode": "88901",
+      "department": "Management"
+    },
+    {
+      "firstName": "Bulma",
+      "lastName": "Brief",
+      "dateOfBirth": "1984-08-18",
+      "startDate": "2014-11-30",
+      "street": "Tech Lane",
+      "city": "West City",
+      "selectedState": "IL",
+      "zipCode": "60601",
+      "department": "Research"
+    },
+    {
+      "firstName": "Seiya",
+      "lastName": "Kido",
+      "dateOfBirth": "1986-12-01",
+      "startDate": "2022-02-20",
+      "street": "Sanctuary Road",
+      "city": "Athens",
+      "selectedState": "GA",
+      "zipCode": "30301",
+      "department": "Support"
+    },
+    {
+        "firstName": "Ichigo",
+        "lastName": "Kurosaki",
+        "dateOfBirth": "1998-07-15",
+        "startDate": "2020-08-12",
+        "street": "Karakura Town",
+        "city": "Karakura",
+        "selectedState": "NJ",
+        "zipCode": "07001",
+        "department": "Security"
+      },
+      {
+        "firstName": "Rukia",
+        "lastName": "Kuchiki",
+        "dateOfBirth": "1999-01-14",
+        "startDate": "2021-02-27",
+        "street": "Soul Society",
+        "city": "Karakura",
+        "selectedState": "PA",
+        "zipCode": "15213",
+        "department": "Human Resources"
+      }
+  ]
+  

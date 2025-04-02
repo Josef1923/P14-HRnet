@@ -25,6 +25,8 @@
             padding: 5px;
             font-size: 16px;
             border: none;
+            border-radius: 5px;
+            outline-color: #93AC19;
         }
     }
 
@@ -42,6 +44,8 @@
             height: 25px;
             padding: 5px;
             border: none;
+            border-radius: 5px;
+            outline-color: #93AC19;
         }
 
         .address {
@@ -65,6 +69,7 @@
         color: white;
         border: none;
         border-radius: 10px;
+       
 
         &:hover {
             background-color: #5A7008;
@@ -84,15 +89,19 @@
 .jsDropdown {
     margin-top: 5px;    
     width: 100%;
+    outline-color: #93AC19; 
 }
 
 .jsDropdownButton {
-    background-color: white
+    background-color: white ;
+    outline-color: #93AC19;     
+    
 }
 
 .jsDropdownList {
-    font-size: 15px;
+    font-size: 15px;    
     font-weight: 100;
+    outline-color: #93AC19;     
 }
 
 .modal-overlay {
@@ -105,7 +114,7 @@
   
   .modal {
     background: white;
-    padding: 30px;;
+    padding: 30px;
     width: 20%;
     margin: 20% auto;
     height: 50px;

@@ -16,8 +16,12 @@ const employeeSlice = createSlice({
             state.employees.push(action.payload);
             localStorage.setItem('employees', JSON.stringify(state.employees));
         },
+        addEmployeesList: (state, action) => {
+            state.employees = action.payload;
+            localStorage.setItem('employees', JSON.stringify(state.employees));
+        }
     },
 });
 
-export const { addEmployee } = employeeSlice.actions;
+export const { addEmployee, addEmployeesList } = employeeSlice.actions;
 export default employeeSlice.reducer;
