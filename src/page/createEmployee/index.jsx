@@ -7,7 +7,6 @@ import Dropdown from "josef1923-dropdown-react"
 import "josef1923-dropdown-react/src/Dropdown.css"
 import { states } from "../../datas/states";
 import { departments } from "../../datas/departments";
-import icon from "../../assets/icon/icon.svg";
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '../../redux/slice';
 import Modal from 'react-modal';
@@ -111,8 +110,7 @@ function Create() {
                             <label htmlFor='state'>State</label>
                             <Dropdown
                                 options={stateOptions}
-                                onChange={(val) => setSelectedState(val)}
-                                icon={<img src={icon} alt="Dropdown Icon" />}
+                                onChange={(val) => setSelectedState(val)}                                
                             />
                             <label htmlFor='zipCode'>Zip Code</label>
                             <input type='number' id='zipCode' name='zipCode'
@@ -122,7 +120,6 @@ function Create() {
                         <Dropdown
                             options={departments}
                             onChange={(val) => setDepartment(val)}
-                            icon={<img src={icon} alt="Dropdown Icon" />}
                         />
                     </div>
                 </div>
