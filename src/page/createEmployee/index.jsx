@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Header from '@/header';
 import Footer from '@/footer';
 import DatePicker from 'react-datepicker';
@@ -30,10 +30,12 @@ function Create() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
 
-    const stateOptions = states.map((state) => ({
-        label: state.name,
-        value: state.abbreviation
-    }))
+    const stateOptions = useMemo(() => {
+        return states.map((state) => ({
+            label: state.name,
+            value: state.abbreviation
+        }))
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
