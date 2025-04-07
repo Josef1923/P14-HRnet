@@ -39,13 +39,13 @@ const colonnes = [
         name: 'City',
         selector: row => row.city,
         sortable: true,
-        width: '120px'
+        width: '110px'
     },
     {
         name: 'State',
         selector: row => row.selectedState,
         sortable: true,
-        width: '60px'
+        width: '80px'
     },
     {
         name: 'Zip Code',
